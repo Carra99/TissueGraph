@@ -29,7 +29,7 @@ In cancer research, studying how non-cancerous cells (e.g. immune cells, fibrobl
 - Each node represents a **single cell**.
 - Cell are grouped into neighborhoods.
 - Node size or label shows **how many neighborhoods** a cell belongs to.
-- Helps detecting **interface cells** bridging multiple compartments. 
+- Helps detecting cells involved in multiple compartments. 
 
 ---
 
@@ -37,7 +37,7 @@ In cancer research, studying how non-cancerous cells (e.g. immune cells, fibrobl
 
 - Shows how each **cell is positioned relative to nearby spatial neighborhoods** (clusters of cells).
 - Using cluster centroids, the tool generates **barycentric-like plots** that represent how close a cell is to each sorrounding neighborhood.
-- This helps identifying cells that lie at the **intersection of multiple regions**, such as immune-tumor boundaries or other stromal interfaces.
+- Helps detecting cells that are phisically embedded, offset or at the interface between regions
   
 ---
 
