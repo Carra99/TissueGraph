@@ -86,6 +86,6 @@ Dependencies:
 
 ---
 
-## 📎 Credits 🧩
+## 📎
 
 This tool was developed as a final project for the course [WIS Python Course – March 2025](https://github.com/code-Maven/wis-python-course-2025-03).
