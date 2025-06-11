@@ -13,7 +13,7 @@ In cancer research, studying how non-cancerous cells (e.g. immune cells, fibrobl
 
 --- 
 
-## 💡 Main Features 🚀
+## 💡 Features 🚀
 
 ### 1️⃣ Super-node Graphs from Cell Neighborhoods
 
