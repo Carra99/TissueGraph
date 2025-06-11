@@ -9,7 +9,7 @@
 **Spatial biology** is revolutionizing our understanding of tissue architecture by enabling researchers to map the localization and interactions of dozens of proteins or RNA molecules at single-cell resolution, directly on the tissue. Technologies like **Multiplexed Ion Beam Imaging (MIBI)** and **CODEX (CO-Detection by Indexing)** generate high-dimensional data that include both cellular phenotypes and spatial positions.
 In cancer research, studying how non-cancerous cells (e.g. immune cells, fibroblasts) are distributed around tumor cells or how different cell types form spatial "neighborhoods" can reveal patterns of tumor remodeling and growth. However, the complexity of high-resolution datasets makes visual interpretation and analysis challenging.
 
-This tool offers three core strategies to simplify and analyze spatial organization: 
+**TissueGraph** offers three core strategies to simplify and analyze spatial organization: 
 
 --- 
 
@@ -33,11 +33,15 @@ This tool offers three core strategies to simplify and analyze spatial organizat
 
 ---
 
-### 3️⃣ Barycentric Plots for Local Spatial Geometry 
+### 3️⃣ Barycentric Plots based on Neighborhood Relationships
 
+- Shows how each **cell is positioned relative to nearby spatial neighborhoods** (clusters of cells).
+- Using cluster centroids, the tool generates **barycentric-like plots** that represent how close a cell is to each sorrounding neighborhood.
+- This helps identifying cells that lie at the **intersection of multiple regions**, such as immune-tumor boundaries or other stromal interfaces.
+  
 ---
 
-## 📥 Input Format
+## 📥 Input Format ⬇️
 
 The tool expects a CSV file with the following fields:
 
@@ -50,21 +54,21 @@ The tool expects a CSV file with the following fields:
 
 ---
 
-## 📤 Output Files
+## 📤 Output Files ⬆️
 
 - `supernode_graph.png`: Graph of neighborhoods (1 node = 1 group of cells)
 - `cell_graph_participation.png`: Cell graph with labels showing how many neighborhoods each cell belongs to
-- `barycentric_plot.png`: Barycentric visualization showing spatial geometry of local cell arrangement
+- `barycentric_plot.png`: Barycentric visualization showing spatial position of each cell relative to nearby neighborhoods 
 - `neighborhood_graph.gml`: GraphML file for interactive exploration
-- `graph_summary.csv`: Table of graph stats (e.g., neighbors, centrality, participation)
+- `graph_summary.csv`: Table of graph stats (e.g. neighbors, centrality, participation)
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Installation 🧑‍💻
 
 ```bash
-git clone https://github.com/yourusername/spatial-neighborhood-graph.git
-cd spatial-neighborhood-graph
+git clone https://github.com/carra99/tissuegraph.git
+cd tissuegraph
 pip install -r requirements.txt
 ```
 
@@ -74,8 +78,14 @@ Dependencies:
 
 ---
 
-## Potential Use Cases 
+## 🧠 Use Cases 🧪
+
+- Visualizing **microenvironments** in tumors
+- Comparing **spatial architecture** across patient samples
+- Identifying **hub** or **bridging** cells in complex tissues
 
 ---
 
-## 📎 Credits 
+## 📎 Credits 🧩
+
+This tool was developed as a final project for the course [WIS Python Course – March 2025](https://github.com/code-Maven/wis-python-course-2025-03).
