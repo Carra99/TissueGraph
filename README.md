@@ -41,6 +41,34 @@ In cancer research, studying how non-cancerous cells (e.g. immune cells, fibrobl
   
 ---
 
+## ▶️ How to Run
+
+To run the tool from command line:
+
+```bash
+python tissuegraph.py --input_csv my_data.csv --output_dir results/
+```
+
+Optional arguments:
+
+- `--input_csv`: Path to CSV with cell centroids.
+- `--input_mask`: Alternatively, use a labeled segmentation mask (e.g. TIFF).
+- `--group_mode`: Enables super-node graph construction via DBSCAN.
+- `--eps`: DBSCAN neighborhood distance (default: 30).
+- `--min_samples`: Minimum samples for DBSCAN clustering (default: 5).
+- `--participation`: Builds the cell-level graph with participation metric.
+- `--radius`: Distance threshold for participation graphs (default: 20).
+- `--barycentric`: Activates barycentric plot generation.
+- `--output_dir`: Output directory for saving figures and results.
+
+Example using a mask:
+
+```bash
+python tissuegraph.py --input_mask path/to/mask.tif --group_mode --participation --barycentric --output_dir results/
+```
+
+---
+
 ## 📥 Input Format ⬇️
 
 The tool expects a CSV file with the following fields:
