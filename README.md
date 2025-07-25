@@ -48,7 +48,7 @@ The tool expects a CSV file with the following fields:
 | Column Name   | Description                              |
 |---------------|------------------------------------------|
 | `Cell_ID`     | Unique identifier for each cell          |
-| `X`, `Y`      | 2D coordinates of each cell in microns   |
+| `X`, `Y`      | (Optional) 2D coordinates of each cell in microns   |
 | `Cell_Type`   | (Optional) Biological annotation         |
 | `Region_Label`| (Optional) Region identifier (e.g., Core) |
 
